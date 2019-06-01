@@ -104,11 +104,11 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 // const uni = [];
 
-// let uni = universities.filter((currentObj) => {
-//   return currentObj.university == 'uni';
-// });
+let uni = universities.filter((currentObj) => {
+  return currentObj.university === 'uni';
+});
 
-// console.log(uni);
+console.log(uni);
 
 
 // ==== ADVANCED Array Methods ====
@@ -147,13 +147,17 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-// const lowerCase = [];
+const lowerCase = [];
 
-// zooAnimals.forEach(function(currentObj) {
-//   lowerCase.push(`${currentObj.animal_name}`);
-// });
+zooAnimals.map(lowercase);
 
-// console.log(lowerCase.map(toLowercase())); 
+function names(currentObj, animal_name) {
+  let names = currentObj.animal_name;
+  let lowercase = names.toLowercase();
+  return lowercase;
+}
+
+console.log(lowerCase); 
 
 /* Request 3: .filter() 
 
